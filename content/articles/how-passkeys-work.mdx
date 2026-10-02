@@ -1,0 +1,101 @@
+---
+title: "Passkeys Explained: How Passwordless Sign-In Actually Works"
+excerpt: "Passkeys replace passwords with a cryptographic key pair stored on your devices. Here is what happens when you sign in, why phishing gets much harder, and how to start using them safely."
+category: technology
+tags: [passkeys, security, passwords, privacy]
+author: editorial-team
+publishedAt: 2026-09-28
+status: published
+featured: true
+trending: true
+coverImage: /images/covers/how-passkeys-work.svg
+coverAlt: "Abstract illustration of a digital key connecting a phone and a laptop"
+seoTitle: "Passkeys Explained: How Passwordless Sign-In Works"
+seoDescription: "A plain-language guide to passkeys: how the key pair works, why they resist phishing, how syncing and recovery work, and how to set them up safely."
+---
+
+If you have been prompted to "create a passkey" recently, you are not alone. Many major services now offer passkeys as an alternative to passwords. The pitch is simple: no password to remember, nothing to type, and much stronger protection against phishing. But what is actually happening behind that fingerprint or face prompt?
+
+This guide walks through how passkeys work, what they protect you from, what they don't, and how to adopt them without locking yourself out.
+
+## What a passkey actually is
+
+A passkey is a pair of cryptographic keys created specifically for one website or app:
+
+- **A private key** that stays on your device (or in your password manager's encrypted vault). It is never sent to the website.
+- **A public key** that the website stores on its servers.
+
+The two keys are mathematically linked. Something signed with the private key can be verified with the public key, but the public key cannot be used to work out the private key. That is the core idea that makes passkeys safer than passwords: the website never holds a secret that could be stolen and reused.
+
+<Callout type="info" title="The short version">
+A password is a secret you share with a website. A passkey is a secret you never share at all — you only prove that you have it.
+</Callout>
+
+## What happens when you sign in
+
+When you sign in with a passkey, a short exchange happens in the background:
+
+1. The website sends your device a random one-time challenge.
+2. Your device asks you to unlock the passkey, usually with a fingerprint, face scan, or device PIN.
+3. Your device signs the challenge with the private key and sends back the signature.
+4. The website checks the signature using the public key it stored when you created the passkey.
+
+Your fingerprint or face data does not go to the website. Biometrics only unlock the passkey locally on your device.
+
+## Why passkeys resist phishing
+
+Phishing works by tricking you into typing a password into a fake site that looks real. Passkeys break that trick in two ways.
+
+First, every passkey is bound to the exact domain it was created for. Your browser will not offer a passkey for `example.com` on a lookalike domain, no matter how convincing the page is. Second, there is nothing to type, so there is nothing for an attacker to capture and replay.
+
+Passkeys also neutralize a common problem with passwords: reuse. Because each passkey is unique to one site, a data breach at one service does not expose your accounts elsewhere.
+
+## Synced passkeys vs. device-bound passkeys
+
+There are two broad types, and the difference matters for recovery.
+
+| Type | Where it lives | Good for |
+| --- | --- | --- |
+| Synced passkey | Your platform account or password manager, encrypted and synced across your devices | Everyday accounts; easy recovery if you lose a phone |
+| Device-bound passkey | A single device, such as a hardware security key | High-security accounts where you want the key to never leave one device |
+
+Most people will use synced passkeys. They follow you to a new phone as long as you can sign in to the account that syncs them.
+
+## What passkeys don't protect against
+
+Passkeys are a big improvement, but they are not magic:
+
+- **A compromised device is still a risk.** If someone has full control of your unlocked device, they may be able to use what is on it.
+- **Account recovery can be the weak link.** If a service still lets you reset access with a text message code, an attacker may target that route instead.
+- **Your sync account matters.** For synced passkeys, the account that stores them deserves strong protection, including two-step verification.
+
+## How to start using passkeys safely
+
+You don't need to convert everything at once. A sensible approach:
+
+1. **Start with your most important accounts** — email, your password manager, and your primary platform account. Your email account is often the reset route for everything else.
+2. **Keep a backup method.** Before removing a password, make sure you have a second way in, such as a second device with a passkey or a set of recovery codes stored somewhere safe.
+3. **Choose one place to store passkeys.** Spreading them across several managers makes it harder to know what lives where.
+4. **Review recovery options** on each account and remove outdated phone numbers or email addresses.
+
+<Callout type="tip" title="Practical tip">
+When you create a passkey, note on which device or manager you saved it. A simple list of "account → where the passkey lives" saves real stress later.
+</Callout>
+
+## Frequently asked questions
+
+### Can I still use my password?
+
+On most services, yes. Passkeys are usually offered alongside passwords at first. Over time you may choose to remove the password entirely where the service allows it.
+
+### What if I lose my phone?
+
+With synced passkeys, signing in to your sync account on a new device restores them. With device-bound passkeys, you'll need the backup method you set up — which is why setting one up first matters.
+
+### Are passkeys tied to one company's ecosystem?
+
+Passkeys are built on open standards developed by the FIDO Alliance and W3C. Support for moving passkeys between providers has been improving, but it is still worth checking how your chosen manager handles export before committing to it.
+
+## The bottom line
+
+Passkeys remove the most common ways accounts get taken over: reused passwords, phished passwords, and leaked password databases. Start with the accounts that matter most, keep a backup sign-in method, and let the rest follow naturally as services add support.

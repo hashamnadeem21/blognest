@@ -1,0 +1,98 @@
+import { z } from "zod";
+import { CATEGORY_SLUGS } from "@/lib/categories";
+
+/**
+ * Single source of truth for article and author data shape.
+ * The MDX repository validates frontmatter against these schemas today; a
+ * future PostgreSQL repository should validate rows against the same schemas.
+ */
+
+export const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+const isoDate = z
+  .union([z.string(), z.date()])
+  .transform((value, ctx) => {
+    const date = value instanceof Date ? value : new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      ctx.addIssue({ code: "custom", message: "Invalid date" });
+      return z.NEVER;
+    }
+    return date.toISOString();
+  });
+
+export const articleStatusSchema = z.enum(["draft", "published"]);
+export type ArticleStatus = z.infer<typeof articleStatusSchema>;
+
+export const articleFrontmatterSchema = z
+  .object({
+    title: z.string().trim().min(10).max(110),
+    excerpt: z.string().trim().min(50).max(220),
+    category: z.enum(CATEGORY_SLUGS),
+    tags: z
+      .array(z.string().trim().min(2).max(40))
+      .min(1)
+      .max(8)
+      .transform((tags) => Array.from(new Set(tags.map((t) => t.toLowerCase())))),
+    author: z.string().regex(SLUG_PATTERN),
+    publishedAt: isoDate,
+    updatedAt: isoDate.optional(),
+    status: articleStatusSchema.default("draft"),
+    featured: z.boolean().default(false),
+    /** Editorially curated — NOT derived from traffic analytics. */
+    trending: z.boolean().default(false),
+    editorsPick: z.boolean().default(false),
+    coverImage: z.string().regex(/^\/|^https:\/\//, "Use an absolute path or https URL"),
+    coverAlt: z.string().trim().min(10).max(200),
+    coverWidth: z.number().int().positive().default(1600),
+    coverHeight: z.number().int().positive().default(900),
+    seoTitle: z.string().trim().max(70).optional(),
+    seoDescription: z.string().trim().min(50).max(170).optional(),
+    /** Only set when the article was first published elsewhere. */
+    canonicalUrl: z.url().optional(),
+    noindex: z.boolean().default(false),
+    /** Set to false to disable ads on sensitive articles. */
+    ads: z.boolean().default(true),
+  })
+  .strict();
+
+export type ArticleFrontmatter = z.infer<typeof articleFrontmatterSchema>;
+
+export const authorSchema = z
+  .object({
+    slug: z.string().regex(SLUG_PATTERN),
+    name: z.string().trim().min(2).max(80),
+    /** "Organization" for team bylines (e.g. an editorial desk), "Person" for individuals. */
+    type: z.enum(["Person", "Organization"]).default("Person"),
+    role: z.string().trim().min(2).max(80),
+    bio: z.string().trim().min(40).max(600),
+    avatar: z.string().regex(/^\/|^https:\/\//),
+    links: z
+      .object({
+        website: z.url().optional(),
+        x: z.url().optional(),
+        linkedin: z.url().optional(),
+      })
+      .partial()
+      .default({}),
+  })
+  .strict();
+
+export type Author = z.infer<typeof authorSchema>;
+
+export interface TocItem {
+  id: string;
+  text: string;
+  depth: 2 | 3;
+}
+
+export interface ArticleSummary extends ArticleFrontmatter {
+  slug: string;
+  readingTimeMinutes: number;
+  wordCount: number;
+}
+
+export interface Article extends ArticleSummary {
+  /** Raw MDX body (frontmatter removed). */
+  content: string;
+  toc: TocItem[];
+}

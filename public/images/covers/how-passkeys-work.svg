@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Abstract illustration of a digital key connecting a phone and a laptop">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(21)">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+    <radialGradient id="glow0"><stop offset="0" stop-color="#0EA5E9" stop-opacity=".75"/><stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow1"><stop offset="0" stop-color="#6366F1" stop-opacity=".65"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" fill-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1174.5" cy="298.5" r="452.4" fill="url(#glow0)"/>
+  <circle cx="196.6" cy="523.6" r="439.4" fill="url(#glow1)"/>
+  <circle cx="777.5" cy="185.2" r="514.1" fill="url(#glow0)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <path d="M406.2 540.2H559.7L619.7 654.8H713.1" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="713.1" cy="654.8" r="9" fill="#38BDF8"/>
+  <circle cx="406.2" cy="540.2" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M582.9 557.2H857.7L917.7 557.1H1132.5" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="1132.5" cy="557.1" r="9" fill="#38BDF8"/>
+  <circle cx="582.9" cy="557.2" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M590.6 727.5H763L823 749.9H935.4" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="935.4" cy="749.9" r="9" fill="#38BDF8"/>
+  <circle cx="590.6" cy="727.5" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M569.9 370.9H711.4L771.4 460.5H852.9" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="852.9" cy="460.5" r="9" fill="#38BDF8"/>
+  <circle cx="569.9" cy="370.9" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M317.2 461.8H629.7L689.7 559H942.1" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="942.1" cy="559" r="9" fill="#38BDF8"/>
+  <circle cx="317.2" cy="461.8" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M359 516.8H514L574 455.4H668.9" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="668.9" cy="455.4" r="9" fill="#38BDF8"/>
+  <circle cx="359" cy="516.8" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M423.2 299.7H682.9L742.9 403.2H942.6" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="942.6" cy="403.2" r="9" fill="#38BDF8"/>
+  <circle cx="423.2" cy="299.7" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M510.8 353.8H676.8L736.8 257.8H842.7" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="842.7" cy="257.8" r="9" fill="#38BDF8"/>
+  <circle cx="510.8" cy="353.8" r="6" fill="#fff" fill-opacity=".8"/>
+  <path d="M411.5 620.7H748.1L808.1 703.4H1084.6" stroke="#38BDF8" stroke-opacity=".55" stroke-width="3" fill="none"/>
+  <circle cx="1084.6" cy="703.4" r="9" fill="#38BDF8"/>
+  <circle cx="411.5" cy="620.7" r="6" fill="#fff" fill-opacity=".8"/>
+  <rect x="980" y="250" width="380" height="380" rx="48" fill="#fff" fill-opacity=".1" stroke="#38BDF8" stroke-opacity=".6" stroke-width="3"/>
+  <rect x="1080" y="350" width="180" height="180" rx="28" fill="url(#accent)"/>
+</svg>

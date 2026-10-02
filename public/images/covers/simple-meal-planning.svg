@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Abstract illustration of colorful bowls arranged on a table">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(69)">
+      <stop offset="0" stop-color="#4C0519"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F43F5E"/>
+      <stop offset="1" stop-color="#FB923C"/>
+    </linearGradient>
+    <radialGradient id="glow0"><stop offset="0" stop-color="#F43F5E" stop-opacity=".75"/><stop offset="1" stop-color="#F43F5E" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow1"><stop offset="0" stop-color="#FB923C" stop-opacity=".65"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" fill-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1128.2" cy="818.4" r="320.2" fill="url(#glow0)"/>
+  <circle cx="389.7" cy="694" r="310.1" fill="url(#glow1)"/>
+  <circle cx="0.5" cy="525.2" r="496" fill="url(#glow0)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <circle cx="974.2" cy="380" r="170" fill="url(#accent)"/>
+  <path d="M0 560C473.9 440 728.8 620 1600 520V900H0Z" fill="#FB923C" fill-opacity="0.35"/>
+  <path d="M0 645C347.6 525 845.4 705 1600 605V900H0Z" fill="#F43F5E" fill-opacity="0.5"/>
+  <path d="M0 730C243.5 610 921 790 1600 690V900H0Z" fill="#FB923C" fill-opacity="0.6499999999999999"/>
+  <path d="M0 815C494.1 695 810.2 875 1600 775V900H0Z" fill="#F43F5E" fill-opacity="0.7999999999999999"/>
+</svg>

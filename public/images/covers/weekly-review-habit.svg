@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Abstract checklist with completed items and a calendar outline">
+  <defs>
+    <linearGradient id="bg" gradientTransform="rotate(21)">
+      <stop offset="0" stop-color="#052E2B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10B981"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <radialGradient id="glow0"><stop offset="0" stop-color="#10B981" stop-opacity=".75"/><stop offset="1" stop-color="#10B981" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow1"><stop offset="0" stop-color="#14B8A6" stop-opacity=".65"/><stop offset="1" stop-color="#14B8A6" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="32" height="32" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.6" fill="#fff" fill-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1465.1" cy="326" r="302.9" fill="url(#glow0)"/>
+  <circle cx="599.6" cy="3.7" r="439.7" fill="url(#glow1)"/>
+  <circle cx="1402.2" cy="269.8" r="427.4" fill="url(#glow0)"/>
+  <rect width="1600" height="900" fill="url(#dots)"/>
+  <rect x="170" y="170" width="160" height="91.2" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="170" y="279.2" width="160" height="98.6" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="170" y="395.79999999999995" width="160" height="157.8" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="355" y="170" width="160" height="161.1" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="355" y="349.1" width="160" height="160.7" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="540" y="170" width="160" height="159.6" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="540" y="347.6" width="160" height="166.4" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="540" y="532" width="160" height="151.7" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="540" y="701.7" width="160" height="93.4" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="725" y="170" width="160" height="76.7" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="725" y="264.7" width="160" height="107.8" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="725" y="390.5" width="160" height="75.6" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="725" y="484.1" width="160" height="139.3" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="910" y="170" width="160" height="128.7" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="910" y="316.7" width="160" height="118.3" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="910" y="453" width="160" height="158.5" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="910" y="629.5" width="160" height="74.2" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="1095" y="170" width="160" height="102.4" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="1095" y="290.4" width="160" height="98.5" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <rect x="1280" y="170" width="160" height="143.8" rx="18" fill="#fff" fill-opacity="0.18"/>
+  <rect x="1280" y="331.8" width="160" height="160.3" rx="18" fill="#6EE7B7" fill-opacity="0.75"/>
+  <circle cx="1330" cy="700" r="70" fill="url(#accent)"/><path d="M1298 702l22 22 44-48" stroke="#fff" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
